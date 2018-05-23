@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:600" type="text/css" />
+  <link rel="stylesheet" href="./xim-price-widget.css" type="text/css" />
+
+  <title>XIM to USD</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sparklines/2.1.2/jquery.sparkline.min.js"></script>
+</head>
+
+<body>
+  <div class="root">
+    <div class="live-indicator">Live</div>
+    <div class="conversions">
+      <div id="toggle-conversion" class="toggle-conversion">
+        <a class="logo" target="_blank" href="https://www.ximcoin.com">
+          <img src="https://exportid.com/images/contact-xim-icon.gif">
+        </a>
+        <span class="conversion--usd">XIM:USD</span>
+        <span class="conversion--xlm hidden">XIM:XLM</span>
+      </div>
+      <div class="prices">
+        <div class="prices__xim-usd conversion--usd">
+          <p class="price">
+            <span>$</span>
+            <span id="usd-xim-price">...</span>
+          </p>
+          <p class="price">
+            <span id="xim-usd-price">...</span>
+            <span>XIM</span>
+          </p>
+        </div>
+        <div class="prices__xim-xlm conversion--xlm hidden">
+          <p class="price">
+            <span id="xlm-xim-price">...</span>
+          </p>
+          <p class="price">
+            <span id="xim-xlm-price">...</span>
+            <span>XIM</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <p id="sparkline"></p>
+
+    <div class="actions">
+      <span id="toggle-calc" class="actions__toggle-calc">calc</span>
+      <a class="actions__buy-sell" href="https://stellarterm.com/#exchange/XIM-ximcoin.com/XLM-native" target="_blank">buy / sell</a>
+    </div>
+
+    <div id="calc" class="calc hidden">
+      <div class="calc__amount conversion--xlm hidden">
+        <input class="calc__amount__input" type="text" id="calc-xlm" size="12" maxlength="12" />
+        <span>XLM</span>
+      </div>
+
+      <div class="calc__amount conversion--usd">
+        <input class="calc__amount__input" type="text" id="calc-usd" size="12" maxlength="12" />
+        <span>USD</span>
+      </div>
+
+      <div class="calc__amount">
+        <input class="calc__amount__input" type="text" id="calc-xim" size="12" maxlength="12" />
+        <span>XIM</span>
+      </div>
+    </div>
+  </div>
+
+  <script async type="text/javascript" src="./xim-price-widget.js"></script>
+</body>
+
+</html>
