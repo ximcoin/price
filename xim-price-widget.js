@@ -42,8 +42,7 @@ $(document).ready(function() {
       setInterval(() => this.loadXimCurrentPrice(), XIM_PRICE_REFRESH_MS);
 
       $('#toggle-conversion').click(() => this.toggleConversion());
-      $('#toggle-calc').click(() => this.toggleCalculator());
-      this.toggleCalculator();
+      $('#toggle-calc').click(() => this.toggleCalculator());      
 
       $('#calc-xim').keyup(e => {
         const xim = Number(e.target.value) || 0;
@@ -150,5 +149,5 @@ $(document).ready(function() {
     ximCurrencyConverter,
     dataSources
   );
-
+  this.toggleCalculator();
 });
