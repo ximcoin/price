@@ -63,6 +63,7 @@ $(document).ready(function() {
           Math.round(this.ximCurrencyConverter.getXimPerUsd(usd))
         );
       });
+      this.toggleCalculator();
     }
 
     toggleConversion() {
@@ -149,5 +150,5 @@ $(document).ready(function() {
     ximCurrencyConverter,
     dataSources
   );
-  this.toggleCalculator();
+  
 });
