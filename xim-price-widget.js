@@ -98,15 +98,18 @@ $(document).ready(function() {
     }
 
     onPricesUpdated() {
-      $('#usd-xim-price').text(this.ximCurrencyConverter.getUsdPerXim());
+      $('#usd-xim-price').text(
+        Math.round(this.ximCurrencyConverter.getUsdPerXim())
+      );
       $('#xim-usd-price').text(
         Math.round(this.ximCurrencyConverter.getXimPerUsd())
       );
-
       $('#xim-xlm-price').text(
         Math.round(this.ximCurrencyConverter.getXimPerXlm())
       );
-      $('#xlm-xim-price').text(this.ximCurrencyConverter.getXlmPerXim());
+      $('#xlm-xim-price').text(
+        Math.round(this.ximCurrencyConverter.getXlmPerXim())
+      );
     }
 
     updateSparkline(recentPrices) {
