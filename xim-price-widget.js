@@ -149,4 +149,6 @@ $(document).ready(function() {
     ximCurrencyConverter,
     dataSources
   );
+  
+  this.resetCalculator();
 });
