@@ -78,7 +78,7 @@ $(document).ready(function() {
     }
 
     resetCalculator() {
-      $('#calc-xim').val(this.ximCurrencyConverter.getXimPerUsd);
+      $('#calc-xim').val(this.ximCurrencyConverter.getXimPerUsd());
       $('#calc-usd').val(1);
       $('#calc-xlm').val(this.ximCurrencyConverter.getXlmPerXim());
     }
