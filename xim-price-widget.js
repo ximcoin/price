@@ -82,6 +82,7 @@ $(document).ready(function() {
       $('#calc-usd').val(1);
       $('#calc-xlm').val(this.ximCurrencyConverter.getXlmPerXim());
     }
+    resetCalculator();
 
     loadXimCurrentPrice() {
       this.dataSources.getXimCurrentPrice().then(ximPrice => {
@@ -150,5 +151,4 @@ $(document).ready(function() {
     dataSources
   );
   
-  this.resetCalculator();
 });
