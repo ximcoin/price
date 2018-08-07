@@ -43,6 +43,7 @@ $(document).ready(function() {
 
       $('#toggle-conversion').click(() => this.toggleConversion());
       $('#toggle-calc').click(() => this.toggleCalculator());
+      this.toggleCalculator();
 
       $('#calc-xim').keyup(e => {
         const xim = Number(e.target.value) || 0;
@@ -82,7 +83,6 @@ $(document).ready(function() {
       $('#calc-usd').val(1);
       $('#calc-xlm').val(this.ximCurrencyConverter.getXlmPerXim());
     }
-    resetCalculator();
 
     loadXimCurrentPrice() {
       this.dataSources.getXimCurrentPrice().then(ximPrice => {
@@ -150,5 +150,5 @@ $(document).ready(function() {
     ximCurrencyConverter,
     dataSources
   );
-  
+
 });
