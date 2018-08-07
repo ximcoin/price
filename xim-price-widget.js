@@ -98,7 +98,7 @@ $(document).ready(function() {
     }
 
     onPricesUpdated() {
-      $('#usd-xim-price').text(Math.round(this.ximCurrencyConverter.getUsdPerXim()));
+      $('#usd-xim-price').text(this.ximCurrencyConverter.getUsdPerXim());
       $('#xim-usd-price').text(
         Math.round(this.ximCurrencyConverter.getXimPerUsd())
       );
