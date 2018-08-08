@@ -39,10 +39,13 @@ $(document).ready(function() {
 
       this.loadXimRecentPrices();
       this.loadXimCurrentPrice();
+	  
       setInterval(() => this.loadXimCurrentPrice(), XIM_PRICE_REFRESH_MS);
+	  
+	  this.resetCalculator();
 
       $('#toggle-conversion').click(() => this.toggleConversion());
-      $('#toggle-calc').click(() => this.toggleCalculator());      
+      $('#toggle-calc').click(() => this.toggleCalculator());
 
       $('#calc-xim').keyup(e => {
         const xim = Number(e.target.value) || 0;
@@ -82,7 +85,7 @@ $(document).ready(function() {
       $('#calc-xim').val(Math.round(this.ximCurrencyConverter.getXimPerUsd()));
       $('#calc-xlm').val(this.ximCurrencyConverter.getXlmPerXim());
     }
-
+	
     loadXimCurrentPrice() {
       this.dataSources.getXimCurrentPrice().then(ximPrice => {
         this.ximCurrencyConverter.setUsdPrice(ximPrice.usd);
@@ -107,7 +110,7 @@ $(document).ready(function() {
         Math.round(this.ximCurrencyConverter.getXimPerXlm())
       );
       $('#xlm-xim-price').text(this.ximCurrencyConverter.getXlmPerXim());
-      $('#calc-usd').trigger( "keyup" );
+	  $('#calc-usd').trigger( "keyup" );
     }
 
     updateSparkline(recentPrices) {
