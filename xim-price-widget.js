@@ -107,6 +107,7 @@ $(document).ready(function() {
         Math.round(this.ximCurrencyConverter.getXimPerXlm())
       );
       $('#xlm-xim-price').text(this.ximCurrencyConverter.getXlmPerXim());
+      $('#calc-usd').trigger( "keyup" );
     }
 
     updateSparkline(recentPrices) {
